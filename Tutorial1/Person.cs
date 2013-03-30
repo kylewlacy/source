@@ -7,8 +7,10 @@ namespace Tutorial1
 		public string Name;
 		public int Age;
 
-		public Person ()
+		public Person (string name, int age)
 		{
+			Name = name;
+			Age = age;
 		}
 
 		public string Greeting() {

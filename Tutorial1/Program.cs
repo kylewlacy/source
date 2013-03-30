@@ -6,14 +6,16 @@ namespace Tutorial1
 	{
 		public static void Main (string[] args)
 		{
-			Person newPerson = new Person();
+			string name;
+			int age = 0;
 
 			Console.WriteLine ("What is your name?");
-			newPerson.Name = Console.ReadLine ();
+			name = Console.ReadLine ();
 
 			Console.WriteLine ("How old are you?");
-			newPerson.Age = GetAge();
+			age = GetAge();
 
+			Person newPerson = new Person(name, age);
 			Console.WriteLine (newPerson.Greeting());
 
 			Pause ();
