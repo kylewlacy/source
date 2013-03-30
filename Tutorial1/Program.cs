@@ -19,12 +19,17 @@ namespace Tutorial1
 				age = Int32.Parse (ageInput);
 			} catch {
 				Console.WriteLine (String.Format ("{0} is not a valid age!", ageInput));
-				Console.ReadKey (true);
+				Pause ();
 				Environment.Exit (0);
 			}
 
 			Console.WriteLine (String.Format ("Hello, {0} (age {1})!", name, age));
 
+			Pause ();
+		}
+
+		public static void Pause() {
+			Console.WriteLine ("Press any key to quit...");
 			Console.ReadKey (true);
 		}
 	}
