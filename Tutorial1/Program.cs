@@ -13,8 +13,17 @@ namespace Tutorial1
 			name = Console.ReadLine ();
 
 			Console.WriteLine ("How old are you?");
+			age = GetAge();
 
+			Console.WriteLine (String.Format ("Hello, {0} (age {1})!", name, age));
+
+			Pause ();
+		}
+
+		public static int GetAge() {
+			int age = 0;
 			string ageInput = Console.ReadLine ();
+
 			try {
 				age = Int32.Parse (ageInput);
 			} catch {
@@ -23,9 +32,7 @@ namespace Tutorial1
 				Environment.Exit (0);
 			}
 
-			Console.WriteLine (String.Format ("Hello, {0} (age {1})!", name, age));
-
-			Pause ();
+			return age;
 		}
 
 		public static void Pause() {
