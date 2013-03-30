@@ -6,7 +6,9 @@ namespace Tutorial1
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
+			Console.WriteLine ("What is your name?");
+			string name = Console.ReadLine ();
+			Console.WriteLine (name);
 			Console.ReadKey (true);
 		}
 	}
