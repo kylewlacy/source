@@ -8,7 +8,8 @@ namespace Tutorial1
 		{
 			Console.WriteLine ("What is your name?");
 			string name = Console.ReadLine ();
-			Console.WriteLine (name);
+			Console.WriteLine (String.Format ("Hello, {0}!", name));
+
 			Console.ReadKey (true);
 		}
 	}
