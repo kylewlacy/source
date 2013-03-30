@@ -26,6 +26,39 @@ namespace Tutorial1
 				return String.Format ("Hello, {0} (age {1})!", Name, Age);
 			}
 		}
+
+		public static Person FromInput() {
+			string name;
+			int age = 0;
+
+			Console.WriteLine ("What is your name?");
+			name = Console.ReadLine ();
+
+			Console.WriteLine ("How old are you?");
+			age = getAge();
+
+			return new Person(name, age);
+		}
+
+		static int getAge() {
+			int age = 0;
+			string ageInput = Console.ReadLine ();
+
+			try {
+				age = Int32.Parse (ageInput);
+			} catch {
+				Console.WriteLine (String.Format ("{0} is not a valid age!", ageInput));
+				Pause ();
+				Environment.Exit (0);
+			}
+
+			return age;
+		}
+
+		static void Pause() {
+			Console.WriteLine ("Press any key to quit...");
+			Console.ReadKey (true);
+		}
 	}
 }
 
