@@ -6,29 +6,28 @@ namespace Tutorial1
 	{
 		public static void Main (string[] args)
 		{
-			int age = 0;
-			string name;
+			Person newPerson = new Person();
 
 			Console.WriteLine ("What is your name?");
-			name = Console.ReadLine ();
+			newPerson.Name = Console.ReadLine ();
 
 			Console.WriteLine ("How old are you?");
-			age = GetAge();
+			newPerson.Age = GetAge();
 
-			if(age < 18) {
+			if(newPerson.Age < 18) {
 				Console.WriteLine ("You are too young!");
 				Pause ();
 				Environment.Exit (0);
 			}
 
-			else if(age < 21) {
+			else if(newPerson.Age < 21) {
 				Console.WriteLine ("You are old enough, but not old enough for the office parties!");
 				Pause ();
 				Environment.Exit (0);
 			}
 
 			else {
-				Console.WriteLine (String.Format ("Hello, {0} (age {1})!", name, age));
+				Console.WriteLine (String.Format ("Hello, {0} (age {1})!", newPerson.Name, newPerson.Age));
 			}
 
 			Pause ();
