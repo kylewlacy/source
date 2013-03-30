@@ -1,0 +1,9 @@
+*.userprefs
+*.usertasks
+AssemblyInfo.cs
+
+*.pidb
+*.resources
+bin/
+obj/
+test-results/
