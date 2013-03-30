@@ -9,12 +9,13 @@ namespace Tutorial1
 			Person newPerson = Person.FromInput();
 			Console.WriteLine (newPerson.Greeting());
 
-			Pause ();
+			Quit ();
 		}
 
-		public static void Pause() {
+		public static void Quit() {
 			Console.WriteLine ("Press any key to quit...");
 			Console.ReadKey (true);
+			Environment.Exit (0);
 		}
 	}
 }
